@@ -1,0 +1,16 @@
+.button-cancel{
+    width: 100%;
+    margin-top: 10px; 
+  }
+  
+  /* Specific color styles */
+  .button-submit[color="success"] {
+    --background: var(--ion-color-success); /* Change to desired color */
+    --color: var(--ion-color-light); 
+  }
+  
+  .button-cancel[color="danger"] {
+    --background: var(--ion-color-danger); 
+    --color: var(--ion-color-light); 
+  }
+  

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contact Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="contact">
+  <form (ngSubmit)="editContactDetails()" [formGroup]="contactForm">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" formControlName="userName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" formControlName="userEmail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone Number</ion-label>
+      <ion-input type="tel" formControlName="userPhoneNum"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Save Changes</ion-button>
+  </form>
+  
+  <ion-button type="button" expand="block" color="danger" (click)="deleteContactDetails(contact.userId)">Delete</ion-button>
+</ion-content>
